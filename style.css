@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
+
+:root {
+    font-family: 'Inter', 'Noto Sans JP', sans-serif;
+}
+
+@keyframes slow-zoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+.animate-slow-zoom {
+    animation: slow-zoom 20s ease-in-out infinite alternate;
+}
+
+/* スムーススクロール */
+html {
+    scroll-behavior: smooth;
+}
+
+/* テキストのカーニング調整 */
+.tracking-tighter {
+    letter-spacing: -0.05em;
+}
+
+/* カスタムグラデーションテキスト */
+.text-gradient {
+    background: linear-gradient(135deg, #60a5fa 0%, #10b981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* カードの浮き出し効果 */
+.hover-card {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 40px 60px -15px rgba(0, 0, 0, 0.1);
+}
